@@ -1,6 +1,6 @@
 
 const Home = ({ authUser }) => {
-  
+  console.log("home")
   return (    
     <div>      
       <h1>Hello!</h1>
