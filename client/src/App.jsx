@@ -2,9 +2,8 @@ import { useEffect, useState } from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Container from "react-bootstrap/Container"
 import Home from "./pages/Home"
-import Products from "./pages/Products"
-import Users from "./pages/Users"
-import User from "./pages/User"
+import Quizzes from "./pages/Quizzes"
+import Profile from "./pages/Profile"
 import Login from "./pages/Login"
 import PageNotFound from "./pages/404"
 import Navigation from "./components/Navigation"
@@ -35,10 +34,9 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home authUser={ authUser } />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/users" element={<Users />} />
-            <Route path='/user/:id' element={<User />} />
-            <Route path="/products" element={<Products />} />
+            <Route path="/login" element={<Login />} />           
+            <Route path='/user/:id' element={<Profile />} />
+            <Route path="/products" element={<Quizzes />} />
             <Route path='*' element={<PageNotFound />} />
           </Routes>
         </BrowserRouter>
