@@ -1,9 +1,14 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Cookie from "js-cookie"
 import { Alert, Button, Container, Form } from 'react-bootstrap'
+// import context for user
 
-const LoginPage = (props) => {
- 
+/**
+ * Need to build out AppContext to keep track of currentUser 
+*/
+
+const LoginPage = (props) => { 
+  // const { currentUser, setCurrentUser } = useAppContext()
   const [ loginCreds, setLoginCreds ] = useState({ email: "", password: "" })
 
   const [ formMessage, setFormMessage ] = useState({ type: "", msg: "" })
@@ -21,12 +26,19 @@ const LoginPage = (props) => {
     // If the login was good, save the returned token as a cookie
     if( authResult.result === "success" ){
       Cookie.set("auth-token", authResult.token)
+      // setCurrentUser(authResult.user)
       setFormMessage({ type: "success", msg: "Your login was successful. Proceed!" })
     } else {
       setFormMessage({ type: "danger", msg: "We could not log you in with the credentials provided." })
     }
     setLoginCreds({ email: "", password: "" })
   }
+
+  /*
+  useEffect(() => {
+    if( currentUser ) window.location.href = "/"
+  }, [currentUser])
+  */
 
   return (
     <Container style={{ padding: "50px 200px"}}>

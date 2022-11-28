@@ -9,7 +9,7 @@ require("dotenv").config()
  * Reviews of a quiz are displayed at bottom/end of quiz
  * Reviews can be updated by the associated user
  * Reviews can be deleted by associated user
- */
+*/
 
 // Get all reviews
 const getReviews = async (req, res) => {
@@ -18,7 +18,7 @@ const getReviews = async (req, res) => {
     res.status(200).json({ result: "success", payload: getAllQuery });
   } catch(err) {
     console.log(err);
-    res.status(40).json({ message: "No reviews found" });
+    res.status(400).json({ message: "No reviews found" });
   }
 };
 
@@ -43,7 +43,7 @@ const getReviewsByQuiz = async (req, res) => {
     res.status(200).json({ result: "succes", payload: getAllQuery });
   } catch(err) {
     console.log(err);
-    res.status(404).json({ message: "No reviews found" });
+    res.status(400).json({ message: "No reviews found" });
   }
 };
 
