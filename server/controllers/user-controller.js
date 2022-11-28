@@ -51,8 +51,10 @@ const authenticateLogin = async (req, res) => {
   // If we have a match, we will send back a token (line 43 extracts the password key from the foundUser object)
   const { password, ...modifiedUser } = foundUser
 
+    console.log(modifiedUser)
+
   // Create a token to represent the authenticated user
-  const token = jwt.sign({ _id: modifiedUser._id, email: modifiedUser.email}, process.env.JWT_SECRET)
+  const token = jwt.sign({ _id: modifiedUser._doc._id, email: modifiedUser._doc.email}, process.env.JWT_SECRET)
 
   res
     .status(200)
@@ -70,15 +72,18 @@ const lookupUserByToken = async (req, res) => {
 
   // Get the token from the request headers & decode it 
   const token = cookies["auth-token"]  //cookies.authToken
-  if( !token ) return res.status(401).json({msg: "un-authorized"})
+  if( !token ) return res.status(401).json({msg: "not authorized"})
   
   // Look up the user from the decoded token
   const isVerified = jwt.verify(token, process.env.JWT_SECRET)
-  if( !isVerified ) return res.status(401).json({msg: "un-authorized"})
+  if( !isVerified ) return res.status(401).json({msg: "nope"})
+
+  console.log({isVerified})
 
   const user = await User.findById(isVerified._id)
+  console.log(user)
     if( !user ) {
-      return res.status(401).json({msg: "un-authorized "})
+      return res.status(401).json({msg: "noooo"})
     } else {
       return res.status(200).json({ result: "success", _id: isVerified._id, email: isVerified.email })
     }

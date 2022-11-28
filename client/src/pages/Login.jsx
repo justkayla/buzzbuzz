@@ -32,8 +32,8 @@ const LoginPage = (props) => {
   }
   
   useEffect(() => {
-    if( appState.user ) window.location.href = `/user/${appState.user._id}`
-  }, [appState.user])  
+    if( appState.user ) window.location.href = "/home"
+  }, [appState.user])
 
   return (
     <Container style={{ padding: "50px 200px"}}>
@@ -62,6 +62,8 @@ const LoginPage = (props) => {
 
         <Button variant="primary" type="submit">Submit</Button>
       </Form>
+
+      {/* add signup button */}
       
       { formMessage.msg.length > 0 && (
         <Alert variant={formMessage.type} style={{ marginTop: "2em" }}>

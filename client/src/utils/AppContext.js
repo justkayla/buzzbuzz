@@ -9,11 +9,12 @@ const AppProvider = (props) => {
   const [appReady, setAppReady] = useState(false);
 
   const lookupUser = async () => {
+    console.log("looking up user")
     const authCheck = await fetch("/api/user/lookup");
     const checkResult = await authCheck.json();
     if (checkResult && checkResult.result === "success") {
         console.log({checkResult})
-        setAppState({ ...appState, user: checkResult.payload });
+        setAppState({ ...appState, user: { _id: checkResult._id, email: checkResult.email } });
         setAppReady(true);
     } else {
       setAppReady(true);

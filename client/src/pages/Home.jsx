@@ -1,12 +1,14 @@
+import { useAppContext } from "../utils/AppContext"
 
-const Home = ({ authUser }) => {
-  console.log("home")
+const Home = () => {
+  const { appState, setAppState } = useAppContext()
+  console.log(appState)
   return (    
     <div>      
       <h1>Hello!</h1>
-
-      { authUser !== null && (
-        <p>We have a logged in user: { authUser.email }</p>
+       
+      { appState.user !== null && (
+        <p>We have a logged in user: { appState.user.email }</p>
 
       )}
 
