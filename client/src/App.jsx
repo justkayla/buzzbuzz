@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Container from "react-bootstrap/Container"
+import { AppProvider } from "./utils/AppContext"
 import Home from "./pages/Home"
 import Quizzes from "./pages/Quizzes"
 import Profile from "./pages/Profile"
@@ -28,7 +29,7 @@ function App() {
   }, [])
 
   return (
-    <div>
+    <AppProvider>
       <Navigation />
       <Container>
         <BrowserRouter>
@@ -36,12 +37,12 @@ function App() {
             <Route path="/" element={<Home authUser={ authUser } />} />
             <Route path="/login" element={<Login />} />           
             <Route path='/user/:id' element={<Profile />} />
-            <Route path="/products" element={<Quizzes />} />
+            <Route path="/quizzes" element={<Quizzes />} />
             <Route path='*' element={<PageNotFound />} />
           </Routes>
         </BrowserRouter>
       </Container>
-    </div>
+    </AppProvider>
   );
 }
 
