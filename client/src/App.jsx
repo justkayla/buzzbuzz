@@ -36,7 +36,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home authUser={ authUser } />} />
             <Route path="/login" element={<Login />} />           
-            <Route path='/user/:id' element={<Profile />} />
+            <Route path="/user/:id" element={<Profile />} />
             <Route path="/quizzes" element={<Quizzes />} />
             <Route path='*' element={<PageNotFound />} />
           </Routes>
