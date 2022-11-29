@@ -12,7 +12,7 @@ const Quizzlet = () => {
     const correctAnswers = Array.from(quizForm.children).filter(
       (el) => el.checked && el.value === "true"
     );
-    // DB Storage
+
     setQuizResults(correctAnswers.length / quizData.questions.length);
   };
 
@@ -31,9 +31,9 @@ const Quizzlet = () => {
     <>
       {quizData && !quizResults && (
         <form id="quiz-form">
-          {quizData.questions.map((question, i) => {
-            return <Question question={question} i={i} />;
-          })}
+          {quizData.questions.map((question, i) => (
+            <Question question={question} i={i} />
+          ))}
 
           <button onClick={submitForm}>Submit!</button>
         </form>
