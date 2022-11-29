@@ -2,20 +2,23 @@ const Review = require("../models/Review");
 const connection = require("../config/connection");
 
 const seedReviews = [
-    {
+  {
+        "_id": "638653fe07c3d9aa9c2724ad",
         "review": "This quiz is awesome!",
-        "user": "marySmith",
-        "quizname": "Movie Quiz"
+        "userId": "63865d456f79d7b27fbd1746",
+        "quizId": "6386502423e14753d882bf61"
     },
-    {
+  {
+        "_id": "63865420e9143db21dfc650d",
         "review": "This quiz is OK.",
-        "user": "joeDoe",
-        "quizname": "Movie Quiz"
+        "userId": "63865d4fbe2706d2c2c93842",
+        "quizId": "Movie Quiz"
     },
-    {
+  {
+        "_id": "6386542ded6d88dd577dc258",
         "review": "This quiz is awful!",
-        "user": "ronJones",
-        "quizname": "Movie Quiz"
+        "userId": "63865d6295345f968fad45dd",
+        "quizId": "Movie Quiz"
     },
     
 ];

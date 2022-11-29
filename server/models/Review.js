@@ -3,14 +3,14 @@ const { Schema, model } = require("mongoose");
 const ReviewSchema = new Schema(
     {
         review: { type: String },
-        user:
+        userId:
         {
-            type: Schema.Types.String,
+            type: Schema.Types.ObjectId,
             ref: 'user'
         },
-        quizname:
+        quizId:
         {
-            type: Schema.Types.String,
+            type: Schema.Types.ObjectId,
             ref: 'quiz'
         }
     },

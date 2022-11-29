@@ -4,7 +4,12 @@ const QuizSchema = new Schema(
     {
         quizname: { type: String },
         questions: [{ type: Object }],
-        reviews: [{ type: String }]
+        reviews: [
+            {
+            type: Schema.Types.ObjectId,
+            ref: 'review'
+            }
+        ]
     },
     {
         toJSON: {

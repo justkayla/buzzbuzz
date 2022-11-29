@@ -1,28 +1,34 @@
-const ListContainer = ({quizName}) => {
-    
-    const getQuizReviews = async () => {
+import { useState, useEffect } from "react";
 
-        const reviews = await fetch("/api/review", {
-            method: "Get",
-            headers: { "Content-Type": "application/json" },
-        })
-    
-        const quizReviews = await reviews.json()
+const Review = ({ quizName }) => {
+    const [quizReviews, setQuizReviews] = useState();
 
-        if(quizReviews){
-            console.log("Reviews retrieved");
-        }
-        else {
-            console.log("Failed to get quiz reviews.");
-        }
-    }
+    useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetch("/api/review/");
+      const data = (await res.json()).payload[0];
 
+      setQuizReviews(data);
+    };
+
+    fetchData();
+  }, []);
     
     return (
-        <ul>
-            { props.children }
-        </ul>
+        <>
+            {quizReviews (
+                <div>
+                    {quizReviews.map((review) => {
+                        return (
+                            <>
+                                {review}
+                            </>
+                        )
+                    })}
+                </div>
+            )}
+        </>
     )
 }
 
-export default ListContainer;
+export default Review;
