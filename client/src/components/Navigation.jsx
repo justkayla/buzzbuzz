@@ -1,10 +1,17 @@
-import Container from "react-bootstrap/Container"
-import Nav from "react-bootstrap/Nav"
-import Navbar from "react-bootstrap/Navbar"
-import logo from "../assets/logo.png"
+import { Container, Nav, Navbar } from "react-bootstrap";
+import logo from "../assets/logo.png";
+import { useAppContext } from "../utils/AppContext";
 
+/**
+ * If user is logged in
+ * Display Home, Quizzes, Profile, and Logout tabs
+ * else (if user is not logged in)
+ * Display only Login tab
+ */
 
-const Navigation = (props) => {
+const Navigation = () => {
+  const { appState, setAppState, logout } = useAppContext();
+
   return (
     <Navbar bg="light" variant="light" expand="lg">
       <Container>
@@ -12,15 +19,26 @@ const Navigation = (props) => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/Quizzes">Quizzes</Nav.Link>
-            <Nav.Link href="/Profile">Profile</Nav.Link>
-            <Nav.Link href="/Login">Login</Nav.Link>
+                 <Nav.Link href="/home">Home</Nav.Link>
+
+            <Nav.Link href="/quizzes">Quizzes</Nav.Link>
+
+            <Nav.Link href="/user/:id">Profile</Nav.Link>
+
+            {(!appState || !appState.user) && (
+              <Nav.Link href="/">Login</Nav.Link>
+            )}
+
+            {appState && appState.user && (
+              <Nav.Link href="/" onClick={logout}>
+                Logout
+              </Nav.Link>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
-  )
-}
+  );
+};
 
-export default Navigation
+export default Navigation;

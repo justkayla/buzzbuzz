@@ -1,7 +1,10 @@
+import { useAppContext } from "../utils/AppContext"
+
 
 import image from "../assets/placeholder.png";
-const Home = ({ authUser }) => {
-  console.log("home");
+const Home = () => {
+  const { appState, setAppState } = useAppContext()
+  console.log(appState)
   return (
     <div>
       <h1 className="title-main">Quizzes</h1>
@@ -85,7 +88,7 @@ const Home = ({ authUser }) => {
         </div>
         </div>
       </section>
-
+      
       {/* <div class="row">
   <div class="column">
     <div class="card-top">
