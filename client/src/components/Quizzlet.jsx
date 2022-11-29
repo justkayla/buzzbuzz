@@ -4,16 +4,16 @@ import Question from "./Question";
 const Quizzlet = () => {
   const [quizData, setQuizData] = useState();
   const [quizResults, setQuizResults] = useState();
-  const quizForm = document.getElementById("quiz-form");
+  const quizForm = document.querySelector("form");
 
   const submitForm = (e) => {
     e.preventDefault();
 
-    const correctAnswers = Array.from(quizForm.children).filter(
+    const correctCount = Array.from(quizForm.children).filter(
       (el) => el.checked && el.value === "true"
     );
 
-    setQuizResults(correctAnswers.length / quizData.questions.length);
+    setQuizResults(correctCount.length / quizData.questions.length);
   };
 
   useEffect(() => {
@@ -29,17 +29,17 @@ const Quizzlet = () => {
 
   return (
     <>
-      {quizData && !quizResults && (
-        <form id="quiz-form">
-          {quizData.questions.map((question, i) => (
-            <Question question={question} i={i} />
+      {quizData && isNaN(quizResults) && (
+        <form>
+          {quizData.questions.map((question) => (
+            <Question key={question.prompt} question={question} />
           ))}
 
           <button onClick={submitForm}>Submit!</button>
         </form>
       )}
 
-      {quizResults && <h2>You got {quizResults * 100}%!</h2>}
+      {!isNaN(quizResults) && <h2>You got {quizResults * 100}%!</h2>}
     </>
   );
 };
