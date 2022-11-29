@@ -9,8 +9,8 @@ require("dotenv").config()
 /**
  * Ability to update a user?
  * Ability to delete user?
- * If user is deleted, delete associated reviews? * 
- */
+ * If user is deleted, delete associated reviews? 
+*/
 
 const createUser = async (req, res) => {
   try {
