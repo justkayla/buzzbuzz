@@ -4,7 +4,7 @@ import { Alert, Button, Container, Form } from 'react-bootstrap'
 import { useAppContext } from "../utils/AppContext"
 import { useNavigate } from "react-router-dom";
 
-const LoginPage = (props) => { 
+const Login = (props) => { 
   const { appState, setAppState } = useAppContext()
   const [ loginCreds, setLoginCreds ] = useState({ email: "", password: "" })
 
@@ -86,4 +86,4 @@ const LoginPage = (props) => {
   )
 }
 
-export default LoginPage
+export default Login
