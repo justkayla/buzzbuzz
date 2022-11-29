@@ -1,6 +1,13 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
 
-// useState hook to update buttons to reflect logged in user?
+// logout function is in AppContext, import AppContext to access
+
+/**
+ * If user is logged in
+ * Display Home, Quizzes, Profile, and Logout tabs
+ * If user is not logged in
+ * Display only Login tab
+*/
 
 const Navigation = () => {
   return (
