@@ -3,44 +3,29 @@ const connection = require("../config/connection");
 
 const seedUsers = [
   {
-    fname: "Mary",
-    lname: "Smith",
+    username: "marySmith",
     email: "msmith@gmail.com",
-    password: "msmith",
-    title: "President",
-    salary: 145000,
+    password: "msmith"
   },
   {
-    fname: "John",
-    lname: "Doe",
+    username: "joeDoe",
     email: "jdoe@gmail.com",
-    password: "jdoe",
-    title: "VP",
-    salary: 120000,
+    password: "jdoe"
   },
   {
-    fname: "Ralph",
-    lname: "Jones",
+    username: "ronJones",
     email: "rjones@gmail.com",
-    password: "rjones",
-    title: "Asst VP",
-    salary: 105000,
+    password: "rjones"
   },
   {
-    fname: "Harriet",
-    lname: "Miles",
+    username: "harryMiles",
     email: "hmiles@gmail.com",
-    password: "hmiles",
-    title: "Sales Mgr",
-    salary: 90000,
+    password: "hmiles"
   },
   {
-    fname: "Bre",
-    lname: "Schmidt",
+    username: "benSchmidt",
     email: "bschmidt@gmail.com",
-    password: "bschmidt",
-    title: "Bottle Washer",
-    salary: 5000,
+    password: "bschmidt"
   },
 ];
 

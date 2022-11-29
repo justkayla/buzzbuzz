@@ -5,8 +5,13 @@ const ReviewSchema = new Schema(
         review: { type: String },
         user:
         {
-            type: Schema.Types.ObjectId,
+            type: Schema.Types.String,
             ref: 'user'
+        },
+        quizname:
+        {
+            type: Schema.Types.String,
+            ref: 'quiz'
         }
     },
     {

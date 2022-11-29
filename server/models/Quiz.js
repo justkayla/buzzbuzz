@@ -2,12 +2,9 @@ const { Schema, model } = require("mongoose");
 
 const QuizSchema = new Schema(
     {
-        questions: [
-            { type: Object }
-        ],
-        reviews: [
-            { type: String }
-        ]
+        quizname: { type: String },
+        questions: [{ type: Object }],
+        reviews: [{ type: String }]
     },
     {
         toJSON: {
