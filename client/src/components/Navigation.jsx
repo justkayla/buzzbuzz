@@ -1,4 +1,5 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
+import logo from "../assets/logo.png";
 import { useAppContext } from "../utils/AppContext";
 
 /**
@@ -12,13 +13,13 @@ const Navigation = () => {
   const { appState, setAppState, logout } = useAppContext();
 
   return (
-    <Navbar bg="dark" variant="dark" expand="lg">
+    <Navbar bg="light" variant="light" expand="lg">
       <Container>
-        <Navbar.Brand href="/home">buzzbuzz</Navbar.Brand>
+        <Navbar.Brand href="#home"><img className="logo" src={logo} alt="buzzbuzz logo" /></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/home">Home</Nav.Link>
+                 <Nav.Link href="/home">Home</Nav.Link>
 
             <Nav.Link href="/quizzes">Quizzes</Nav.Link>
 
