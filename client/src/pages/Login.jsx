@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import Cookie from "js-cookie"
 import { Alert, Button, Container, Form } from 'react-bootstrap'
 import { useAppContext } from "../utils/AppContext"
+import { useNavigate } from "react-router-dom";
 
 const LoginPage = (props) => { 
   const { appState, setAppState } = useAppContext()
@@ -29,6 +30,12 @@ const LoginPage = (props) => {
       setFormMessage({ type: "danger", msg: "We could not log you in with the credentials provided." })
     }
     setLoginCreds({ email: "", password: "" })
+  }
+
+  let navigate = useNavigate(); 
+  const routeChange = () =>{ 
+    let path = '/signup'; 
+    navigate(path);
   }
   
   useEffect(() => {
@@ -60,10 +67,15 @@ const LoginPage = (props) => {
           />
         </Form.Group>
 
-        <Button variant="primary" type="submit">Submit</Button>
-      </Form>
+        <Button variant="primary" type="submit">Log in</Button>        
+      </Form>   
 
       {/* add signup button */}
+      <Button color="primary" className="px-4"
+            onClick={routeChange}
+              >
+              Sign up
+            </Button>     
       
       { formMessage.msg.length > 0 && (
         <Alert variant={formMessage.type} style={{ marginTop: "2em" }}>

@@ -9,13 +9,14 @@ require("dotenv").config()
 /**
  * Ability to update a user?
  * Ability to delete user?
- * If user is deleted, delete associated reviews? 
+ * If user is deleted, delete associated reviews? * 
 */
 
 const createUser = async (req, res) => {
   try {
-    const createQuery = await User.create(req.body);
-    res.status(200).json(createQuery);
+    const newUser = await User.create(req.body);
+    const token = jwt.sign({ _id: newUser._id, email: newUser.email}, process.env.JWT_SECRET)
+    res.status(200).json({ result: "success", payload: { user: newUser, token: token } });
   } catch(err) {
     res.status(400).json({ message: 'Unable to create user' });
   }

@@ -6,6 +6,7 @@ import Home from "./pages/Home"
 import Quizzes from "./pages/Quizzes"
 import Profile from "./pages/Profile"
 import Login from "./pages/Login"
+import Signup from "./pages/Signup"
 import PageNotFound from "./pages/404"
 import Navigation from "./components/Navigation"
 
@@ -39,6 +40,7 @@ function App() {
             <Route path="/home" element={<Home  />} />           
             <Route path="/user/:id" element={<Profile  />} />
             <Route path="/quizzes" element={<Quizzes  />} />
+            <Route path="/signup" element={<Signup />} />
             <Route path="*" element={<PageNotFound />} />
           </Routes>
         </BrowserRouter>
