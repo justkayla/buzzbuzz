@@ -12,13 +12,13 @@ const seedReviews = [
         "_id": "63865420e9143db21dfc650d",
         "review": "This quiz is OK.",
         "userId": "63865d4fbe2706d2c2c93842",
-        "quizId": "Movie Quiz"
+        "quizId": "6386502423e14753d882bf61"
     },
   {
         "_id": "6386542ded6d88dd577dc258",
         "review": "This quiz is awful!",
         "userId": "63865d6295345f968fad45dd",
-        "quizId": "Movie Quiz"
+        "quizId": "6386502423e14753d882bf61"
     },
     
 ];

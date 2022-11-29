@@ -111,7 +111,7 @@ const seed = async () => {
       questions: seedQuizzes,
       quizname: quizName,
       quizId: quizId,
-      quizReviews: quizReviews
+      reviews: quizReviews
     })
       
     console.log("seeding done");

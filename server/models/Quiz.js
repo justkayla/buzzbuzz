@@ -6,8 +6,8 @@ const QuizSchema = new Schema(
         questions: [{ type: Object }],
         reviews: [
             {
-            type: Schema.Types.ObjectId,
-            ref: 'review'
+                type: Schema.Types.ObjectId,
+                ref: 'review'
             }
         ]
     },
