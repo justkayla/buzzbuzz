@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import { useAppContext } from "../utils/AppContext";
+import Quizzlet from "../components/Quizzlet";
 
 /**
  * If not logged in, redirect to login page
