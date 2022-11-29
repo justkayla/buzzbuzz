@@ -1,6 +1,14 @@
 const Quiz = require("../models/Quiz");
 const connection = require("../config/connection");
 
+const quizName = "Movie Quiz";
+const quizId = "6386502423e14753d882bf61";
+const quizReviews = [
+  "638653fe07c3d9aa9c2724ad",
+  "63865420e9143db21dfc650d",
+  "6386542ded6d88dd577dc258"
+] 
+
 const seedQuizzes = [
   {
     prompt: "Who played Rachel Green",
@@ -98,12 +106,13 @@ const seed = async () => {
   const queryFirst = await Quiz.find({});
   if (queryFirst && queryFirst.length === 0) {
     console.log("seeding quizzes...");
-
-    // const seed = await Promise.all(
-    //   seedQuizzes.map(async (quiz) => await Quiz.create(quiz))
-    // );
-
-    const seed = await Quiz.create({ questions: seedQuizzes });
+    
+    const seed = await Quiz.create({
+      questions: seedQuizzes,
+      quizname: quizName,
+      quizId: quizId,
+      reviews: quizReviews
+    })
 
     console.log("seeding done");
     process.exit();
