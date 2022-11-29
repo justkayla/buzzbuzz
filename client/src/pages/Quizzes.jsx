@@ -1,17 +1,24 @@
-import { useEffect } from "react"
-import Container from "react-bootstrap/Container"
+import { useState } from "react";
+import Container from "react-bootstrap/Container";
+import { useAppContext } from "../utils/AppContext";
 
-const Quiz = (props) => {
+/**
+ * If not logged in, redirect to login page
+ */
 
-  useEffect( () => {
+const Quiz = () => {
+  const { appState, setAppState } = useAppContext();
+  
+  if (!appState.user) {
+    // alert? you need to be logged in?
+    window.location.href = "/";
+  } else {
+    return (
+      <Container style={{ paddingTop: "1em" }}>
+        <h1>Welcome to the Quizzes page</h1>
+      </Container>
+    );
+  }
+};
 
-  }, [])
-
-  return (
-    <Container style={{ paddingTop: "1em" }}>
-      <h1>Welcome to the Quizzes page</h1>
-    </Container>
-  )
-}
-
-export default Quiz
+export default Quiz;
