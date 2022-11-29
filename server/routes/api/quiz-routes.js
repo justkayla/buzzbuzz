@@ -1,9 +1,7 @@
-const router = require('express').Router()
+const router = require("express").Router();
 
-const {
-    getAllReviews
-} = require('../../controllers/quiz-controller')
+const { getAllQuiz } = require("../../controllers/quiz-controller");
 
-router.route('/').get(getAllReviews)
+router.route("/").get(getAllQuiz);
 
 module.exports = router;
