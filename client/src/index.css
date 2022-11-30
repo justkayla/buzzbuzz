@@ -1,11 +1,11 @@
 @font-face {
-    font-family: "Proxima Nova";
-    src: url("./assets/fonts/ProximaNova-Semibold.woff") format("woff"),
-      url("./assets/fonts/ProximaNova-Semibold.ttf") format("truetype"),
-      url("./assets/fonts/ProximaNova-Semibold.eot") format("embedded-opentype");
-    font-weight: 600;
-    font-style: normal;
-  }
+  font-family: "Proxima Nova";
+  src: url("./assets/fonts/ProximaNova-Semibold.woff") format("woff"),
+    url("./assets/fonts/ProximaNova-Semibold.ttf") format("truetype"),
+    url("./assets/fonts/ProximaNova-Semibold.eot") format("embedded-opentype");
+  font-weight: 600;
+  font-style: normal;
+}
 body {
   background-color: rgb(243, 236, 236);
   font-family: "Proxima Nova";
@@ -19,9 +19,46 @@ body {
 .logo {
   width: 130px;
 }
+.bee {
+  width: 150px;
+}
+.speech-bubble {
+  position: relative;
+  translate: 210px;
+  bottom: 120px;
+  background: #e4b14b;
+  border-radius: 0.4em;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 15px;
+  color: white;
+}
+.greeting {
+  font-size: 35px;
+}
+.line {
+  width: 800px;
+  translate: 300px;
+}
+.card-name {
+  margin-top: 10px;
+}
 
+.card-top {
+  width: 90px;
+  height: 200px;
+  background-color: #ffffff;
+}
+
+.card-text{
+  
+  color: #555;
+  font-size: 14px;
+}
 .category {
-
   border: solid, 1px, rgb(210, 134, 28);
   border-radius: 20px;
   color: rgb(160, 120, 79);
@@ -35,81 +72,72 @@ body {
 }
 
 .title-main {
-    color: #b6a28b;
-}
-  
-  .category:hover {
-    background-color: #dab383; 
-    color: white;
-  }
-.card-top{
-    width: 400px;
-    color: #555;
-    border: solid 2px rgb(157, 112, 68);
-    box-shadow: 5px 5px  rgb(231, 206, 186);
-    text-align: center;
-    margin: 5px;
+  color: #b6a28b;
 }
 
-  .card {
-    color: #555;
-    border: solid 2px rgb(157, 112, 68);
-    box-shadow: 5px 5px  rgb(231, 206, 186);
-    text-align: center;
-    width: 450;
-    margin: 5px;
+.category:hover {
+  background-color: #dab383;
+  color: white;
 }
-.column {
-    padding-top: 15px;
+.card-top {
+  width: 400px;
+  color: #555;
+  border: solid 2px rgb(157, 112, 68);
+  box-shadow: 5px 5px rgb(231, 206, 186);
+  text-align: center;
+  margin: 5px;
 }
-.card-title{
-    padding-top: 3px;
-    padding-bottom: 4px;
-    border-bottom: rgb(227, 216, 199) solid 2px;
+
+.card {
+  color: #555;
+  border: solid 2px rgb(157, 112, 68);
+  box-shadow: 5px 5px rgb(231, 206, 186);
+  text-align: center;
+  width: 450;
+  margin: 5px;
+}
+
+.card-title {
+  padding-top: 3px;
+  padding-bottom: 4px;
+  border-bottom: rgb(227, 216, 199) solid 2px;
 }
 .card-subtitle {
-    padding-top: 4px;
+  padding-top: 4px;
 }
-.quiz-img {
-    border-bottom: rgb(194, 164, 164) solid 1px;
+.mquiz-img {
+  width: 395px;
+  margin-bottom: 5px;
 }
 .image {
-    width: 150px;
-    padding-bottom: 2px;
-}
-.img-top{
   width: 150px;
-  margin-left: 0px;
-  
+  padding-bottom: 2px;
 }
-  . {
-    width: 50px;
-  }
-  .column {
-    margin: 2px;
-    display: flex;
-  }
-  
+.img-top {
+  width: 50px;
+  margin-top: 10px;
+}
+. {
+  width: 50px;
+}
 
-  
- 
-  /* Webkit Scrollbar Deco */
-  /* width */
+/* Webkit Scrollbar Deco */
+/* width */
 ::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #edebe9;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: rgb(222, 140, 26);
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: rgb(94, 92, 89);
-  }
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #edebe9;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(222, 140, 26);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(94, 92, 89);
+}
