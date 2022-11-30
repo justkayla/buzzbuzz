@@ -16,7 +16,7 @@ const Review = ({ quizId }) => {
     
     return (
         <>
-            {quizReviews (
+            {quizReviews && (
                 <div>
                     {quizReviews.map((review) => {
                         return (
