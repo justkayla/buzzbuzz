@@ -23,7 +23,7 @@ function Warning() {
       </Container>
     );
   }
-  return <Button onClick={() => setShow(true)}>Show Alert</Button>;
+  return <Button variant="warning" onClick={() => setShow(true)}>Show Alert</Button>;
 }
 
 export default Warning;
