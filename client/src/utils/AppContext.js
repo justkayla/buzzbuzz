@@ -14,7 +14,7 @@ const AppProvider = (props) => {
     const checkResult = await authCheck.json();
     if (checkResult && checkResult.result === "success") {
         console.log({checkResult})
-        setAppState({ ...appState, user: { _id: checkResult._id, email: checkResult.email } });
+        setAppState({ ...appState, user: { _id: checkResult._id, username: checkResult.username, email: checkResult.email } });
         setAppReady(true);
     } else {
       setAppReady(true);

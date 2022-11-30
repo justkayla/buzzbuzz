@@ -85,7 +85,7 @@ const Signup = () => {
           />
         </Form.Group>
 
-        <Button variant="primary" type="submit">
+        <Button variant="warning" type="submit">
           Sign up!
         </Button>
       </Form>
