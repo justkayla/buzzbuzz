@@ -2,11 +2,13 @@ const { Schema, model } = require("mongoose");
 
 const QuizSchema = new Schema(
     {
-        questions: [
-            { type: Object }
-        ],
+        quizname: { type: String },
+        questions: [{ type: Object }],
         reviews: [
-            { type: String }
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'review'
+            }
         ]
     },
     {

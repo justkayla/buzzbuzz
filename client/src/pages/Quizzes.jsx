@@ -1,7 +1,8 @@
 import { useState } from "react";
-import Container from "react-bootstrap/Container";
 import { useAppContext } from "../utils/AppContext";
+import { Container } from "react-bootstrap";
 import Quizzlet from "../components/Quizzlet";
+import Warning from "../components/Alert";
 
 /**
  * If not logged in, redirect to login page
@@ -12,7 +13,7 @@ const Quiz = () => {
 
   if (!appState.user) {
     // alert? you need to be logged in?
-    window.location.href = "/";
+    return <Warning />;
   } else {
     return (
       <Container style={{ paddingTop: "1em" }}>

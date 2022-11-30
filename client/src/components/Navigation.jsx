@@ -1,6 +1,7 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
-import logo from "../assets/logo.png";
 import { useAppContext } from "../utils/AppContext";
+import { Link } from "react-router-dom";
+import logo from "../assets/logo.png";
 
 /**
  * If user is logged in
@@ -15,22 +16,32 @@ const Navigation = () => {
   return (
     <Navbar bg="light" variant="light" expand="lg">
       <Container>
-        <Navbar.Brand href="#home"><img className="logo" src={logo} alt="buzzbuzz logo" /></Navbar.Brand>
+        <Navbar.Brand as={Link} to="/home">
+          <img className="logo" src={logo} alt="buzzbuzz logo" />
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-                 <Nav.Link href="/home">Home</Nav.Link>
+            <Nav.Link as={Link} to="/home">
+              Home
+            </Nav.Link>
 
-            <Nav.Link href="/quizzes">Quizzes</Nav.Link>
+            <Nav.Link as={Link} to="/quizzes">
+              Quizzes
+            </Nav.Link>
 
-            <Nav.Link href="/user/:id">Profile</Nav.Link>
+            <Nav.Link as={Link} to="/user/:id">
+              Profile
+            </Nav.Link>
 
             {(!appState || !appState.user) && (
-              <Nav.Link href="/">Login</Nav.Link>
+              <Nav.Link as={Link} to="/">
+                Login
+              </Nav.Link>
             )}
 
             {appState && appState.user && (
-              <Nav.Link href="/" onClick={logout}>
+              <Nav.Link as={Link} to="/" onClick={logout}>
                 Logout
               </Nav.Link>
             )}

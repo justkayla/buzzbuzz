@@ -218,7 +218,7 @@ const Home = () => {
         </div>
       </div>
 
-      {authUser !== null && <p>We have a logged in user: {authUser.email}</p>}
+      {/* {appState.user !== null && <p>We have a logged in user: {appState.user.email}</p>} */}
     </div>
   );
 };

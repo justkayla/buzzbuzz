@@ -3,44 +3,34 @@ const connection = require("../config/connection");
 
 const seedUsers = [
   {
-    fname: "Mary",
-    lname: "Smith",
-    email: "msmith@gmail.com",
-    password: "msmith",
-    title: "President",
-    salary: 145000,
+    "_id": "63865d456f79d7b27fbd1746",
+    "username": "marySmith",
+    "email": "msmith@gmail.com",
+    "password": "msmith"
   },
   {
-    fname: "John",
-    lname: "Doe",
-    email: "jdoe@gmail.com",
-    password: "jdoe",
-    title: "VP",
-    salary: 120000,
+    "_id": "63865d4fbe2706d2c2c93842",
+    "username": "joeDoe",
+    "email": "jdoe@gmail.com",
+    "password": "jdoe"
   },
   {
-    fname: "Ralph",
-    lname: "Jones",
-    email: "rjones@gmail.com",
-    password: "rjones",
-    title: "Asst VP",
-    salary: 105000,
+    "_id": "63865d6295345f968fad45dd",
+    "username": "ronJones",
+    "email": "rjones@gmail.com",
+    "password": "rjones"
   },
   {
-    fname: "Harriet",
-    lname: "Miles",
-    email: "hmiles@gmail.com",
-    password: "hmiles",
-    title: "Sales Mgr",
-    salary: 90000,
+    "_id": "63865d6e6733dba890a44f29",
+    "username": "harryMiles",
+    "email": "hmiles@gmail.com",
+    "password": "hmiles"
   },
   {
-    fname: "Bre",
-    lname: "Schmidt",
-    email: "bschmidt@gmail.com",
-    password: "bschmidt",
-    title: "Bottle Washer",
-    salary: 5000,
+    "_id": "63865d7932e662f489539086",
+    "username": "benSchmidt",
+    "email": "bschmidt@gmail.com",
+    "password": "bschmidt"
   },
 ];
 
