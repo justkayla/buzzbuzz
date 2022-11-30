@@ -15,7 +15,7 @@ require("dotenv").config()
 const createUser = async (req, res) => {
   try {
     const newUser = await User.create(req.body);
-    const token = jwt.sign({ _id: newUser._id, email: newUser.email}, process.env.JWT_SECRET)
+    const token = jwt.sign({ _id: newUser._id, username: newUser.username, email: newUser.email}, process.env.JWT_SECRET)
     res.status(200).json({ result: "success", payload: { user: newUser, token: token } });
   } catch(err) {
     res.status(400).json({ message: 'Unable to create user' });
@@ -55,7 +55,7 @@ const authenticateLogin = async (req, res) => {
     console.log(modifiedUser)
 
   // Create a token to represent the authenticated user
-  const token = jwt.sign({ _id: modifiedUser._doc._id, email: modifiedUser._doc.email}, process.env.JWT_SECRET)
+  const token = jwt.sign({ _id: modifiedUser._doc._id, username: modifiedUser._doc._username, email: modifiedUser._doc.email}, process.env.JWT_SECRET)
 
   res
     .status(200)
@@ -86,7 +86,7 @@ const lookupUserByToken = async (req, res) => {
     if( !user ) {
       return res.status(401).json({msg: "noooo"})
     } else {
-      return res.status(200).json({ result: "success", _id: isVerified._id, email: isVerified.email })
+      return res.status(200).json({ result: "success", _id: user._id, username: user.username, email: user.email })
     }
 }
 

@@ -77,10 +77,10 @@ const Login = (props) => {
             }
           />
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <Button variant="warning" type="submit">
           Log in
         </Button>{" "}
-        <Button variant="primary" onClick={routeChange}>
+        <Button variant="warning" onClick={routeChange}>
           Sign up
         </Button>
       </Form>
