@@ -6,9 +6,9 @@ import pop from "../assets/popculture.jpg";
 import hellokitty from "../assets/hellokitty.jpg";
 import disney from "../assets/disney.jpg";
 import pika from "../assets/pika.jpg";
-import image from "../assets/placeholder.png";
+// import image from "../assets/placeholder.png";
 import line from "../assets/line.png";
-import flower from "../assets/flower.jpg";
+// import flower from "../assets/flower.jpg";
 
 const Home = () => {
   const { appState, setAppState } = useAppContext();
@@ -57,7 +57,7 @@ const Home = () => {
           <div class="row">
             <div class="col-lg-4 mb-4">
               <div class="card-top">
-                <img className="img-top" src={flower} alt="yellow flower" />
+                <img className="img-top" src="/assets/flower.jpg" alt="yellow flower" />
                 <div class="card-body">
                   <h5 class="card-name">About Us</h5>
                   <p class="card-text"> BuzzBuzz, is committed to providing trusted, quality, brand-safe news and entertainment to our viewers; making content on the Internet more inclusive, empathetic, and creative; and inspiring our audience to live better lives</p>
@@ -69,7 +69,7 @@ const Home = () => {
             </div>
             <div class="col-lg-4 mb-4">
               <div class="card-top">
-                <img src={flower} className="img-top" alt="placeholder" />
+                <img src="/assets/flower.jpg" className="img-top" alt="placeholder" />
                 <div class="card-body">
                   <h5 class="card-name">Saved Quizzes</h5>
                   <p class="card-text"></p>
@@ -81,7 +81,7 @@ const Home = () => {
             </div>
             <div class="col-lg-4 mb-4">
               <div class="card-top">
-                <img src={image} className="img-top" alt="placeholder" />
+                <img src="/assets/placeholder.png" className="img-top" alt="placeholder" />
                 <div class="card-body">
                   <h5 class="card-name">Logout</h5>
                   <p class="card-text"></p>
