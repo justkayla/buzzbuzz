@@ -1,6 +1,4 @@
 import { useAppContext } from "../utils/AppContext"
-
-
 import image from "../assets/placeholder.png";
 const Home = () => {
   const { appState, setAppState } = useAppContext()
