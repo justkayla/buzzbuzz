@@ -5,7 +5,7 @@ const UserSchema = new Schema({
   username: { type: String },
   email: { type: String },
   password: { type: String },
-  score: { type: Number }
+  score: [{ type: Object }]
 });
 
 UserSchema.pre("save", async function(next) {
