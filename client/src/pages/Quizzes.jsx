@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import { useAppContext } from "../utils/AppContext";
@@ -10,7 +9,7 @@ import Quizzlet from "../components/Quizzlet";
 
 const Quiz = () => {
   const { appState, setAppState } = useAppContext();
-  
+
   if (!appState.user) {
     // alert? you need to be logged in?
     window.location.href = "/";
@@ -25,4 +24,3 @@ const Quiz = () => {
 };
 
 export default Quiz;
-
