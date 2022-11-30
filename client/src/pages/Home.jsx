@@ -57,7 +57,7 @@ const Home = () => {
           <div class="row">
             <div class="col-lg-4 mb-4">
               <div class="card-top">
-                <img className="flower" src={flower} class="img-top" alt="yellow flower" />
+                <img className="img-top" src={flower} alt="yellow flower" />
                 <div class="card-body">
                   <h5 class="card-name">About Us</h5>
                   <p class="card-text"> BuzzBuzz, is committed to providing trusted, quality, brand-safe news and entertainment to our viewers; making content on the Internet more inclusive, empathetic, and creative; and inspiring our audience to live better lives</p>
@@ -69,7 +69,7 @@ const Home = () => {
             </div>
             <div class="col-lg-4 mb-4">
               <div class="card-top">
-                <img src={flower} class="img-top" alt="placeholder" />
+                <img src={flower} className="img-top" alt="placeholder" />
                 <div class="card-body">
                   <h5 class="card-name">Saved Quizzes</h5>
                   <p class="card-text"></p>
@@ -81,7 +81,7 @@ const Home = () => {
             </div>
             <div class="col-lg-4 mb-4">
               <div class="card-top">
-                <img src={image} class="img-top" alt="placeholder" />
+                <img src={image} className="img-top" alt="placeholder" />
                 <div class="card-body">
                   <h5 class="card-name">Logout</h5>
                   <p class="card-text"></p>
