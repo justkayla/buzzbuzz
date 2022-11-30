@@ -114,7 +114,7 @@ body {
   padding-bottom: 2px;
 }
 .img-top {
-  width: 50px;
+  width: 50px !important;
   margin-top: 10px;
 }
 . {
