@@ -26,15 +26,18 @@ const User = (props) => {
     return <Warning />;
   } else {
     return (
-      <Container style={{ paddingTop: "1em" }}>
+      <Container
+        style={{ paddingTop: "2em", display: "flex", justifyContent: "center" }}
+      >
         {!appState.user ? (
           <p>We could not find the user you were seeking.</p>
         ) : (
           <div>
-            <h1>Welcome to your profile page, {appState.user.username} </h1>
-            <p>Details:</p>
+            <h2 style={{ color: "rgb(194, 164, 164)" }}>
+              Welcome to your profile page, {appState.user.username} 🐝
+            </h2>
           </div>
-        )}
+        )}        
       </Container>
     );
   }
