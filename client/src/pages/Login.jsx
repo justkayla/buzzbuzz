@@ -3,6 +3,8 @@ import Cookie from "js-cookie";
 import { Alert, Button, Container, Form } from "react-bootstrap";
 import { useAppContext } from "../utils/AppContext";
 import { useNavigate } from "react-router-dom";
+import { AwesomeButton } from 'react-awesome-button';
+import 'react-awesome-button/dist/styles.css';
 
 const Login = (props) => {
   const { appState, setAppState } = useAppContext();
@@ -77,12 +79,12 @@ const Login = (props) => {
             }
           />
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <AwesomeButton variant="primary" type="submit">
           Log in
-        </Button>{" "}
-        <Button variant="primary" onClick={routeChange}>
+        </AwesomeButton>{" "}
+        <AwesomeButton variant="primary" onClick={routeChange}>
           Sign up
-        </Button>
+        </AwesomeButton>
       </Form>
 
       {formMessage.msg.length > 0 && (
