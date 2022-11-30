@@ -44,11 +44,11 @@ const Signup = () => {
   };
 
   return (
-    <Container style={{ padding: "50px 200px" }}>
-      <Form onSubmit={handleSignup}>
-        <Form.Group className="mb-3" controlId="username">
-          <Form.Label>Username</Form.Label>
-          <Form.Control
+    <Container style={{ marginTop: "100px", display: "flex", justifyContent: "center" }}>
+      <Form onSubmit={handleSignup} style={{ width: "50%" }}>
+        <Form.Group className="mb-2" controlId="username">
+          <Form.Label className="mb-0">Username</Form.Label>
+          <Form.Control            
             type="username"
             name="username"
             placeholder="Enter username"
@@ -59,8 +59,8 @@ const Signup = () => {
           />
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="email">
-          <Form.Label>Email address</Form.Label>
+        <Form.Group className="mb-2" controlId="email">
+          <Form.Label className="mb-0">Email address</Form.Label>
           <Form.Control
             type="email"
             name="email"
@@ -72,8 +72,8 @@ const Signup = () => {
           />
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="password">
-          <Form.Label>Password</Form.Label>
+        <Form.Group className="mb-2" controlId="password">
+          <Form.Label className="mb-0">Password</Form.Label>
           <Form.Control
             type="password"
             name="password"
