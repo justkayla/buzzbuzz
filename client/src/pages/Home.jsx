@@ -8,7 +8,7 @@ import disney from "../assets/disney.jpg";
 import pika from "../assets/pika.jpg";
 import image from "../assets/placeholder.png";
 import line from "../assets/line.png";
-import flower from "../assets/flower.png";
+import flower from "../assets/flower.jpg";
 
 const Home = () => {
   const { appState, setAppState } = useAppContext();
