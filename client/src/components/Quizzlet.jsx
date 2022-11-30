@@ -41,7 +41,9 @@ const Quizzlet = () => {
       )}
 
       {!isNaN(quizResults) && <h2>You got {quizResults * 100}%!</h2>}
-      <Review />
+      {quizData && (
+          <Review quizId={quizData._id} />
+      )}
     </>
   );
 };
