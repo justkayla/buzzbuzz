@@ -1,6 +1,7 @@
 import { Alert, Button, Container, Form } from "react-bootstrap";
 import { useAppContext } from "../utils/AppContext";
 import { useState } from "react";
+import { AwesomeButton } from 'react-awesome-button';
 import Cookie from "js-cookie";
 
 const Signup = () => {
@@ -85,9 +86,9 @@ const Signup = () => {
           />
         </Form.Group>
 
-        <Button variant="warning" type="submit">
+        <AwesomeButton variant="warning" type="submit">
           Sign up!
-        </Button>
+        </AwesomeButton>
       </Form>
 
       {formMessage.msg.length > 0 && (

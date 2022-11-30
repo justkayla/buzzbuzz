@@ -83,9 +83,9 @@ const Login = (props) => {
         <AwesomeButton variant="primary" type="submit">
           Log in
         </AwesomeButton>{" "}
-        <AwesomeButton variant="primary" onClick={routeChange}>
+        <Button variant="primary" type="submit" onClick={routeChange}>
           Sign up
-        </AwesomeButton>
+        </Button>
       </Form>
 
       {formMessage.msg.length > 0 && (
