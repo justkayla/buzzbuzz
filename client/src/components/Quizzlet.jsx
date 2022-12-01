@@ -1,21 +1,16 @@
 import { useState, useEffect } from "react";
 import Question from "./Question";
-// import Review from "./Review";
 import ReviewWrapper from "./ReviewWrapper";
 
 const Quizzlet = () => {
   const [quizData, setQuizData] = useState();
   const [quizResults, setQuizResults] = useState();
-  const quizForm = document.getElementById("quiz-form");
+  const [correctAnswers, setCorrectAnswers] = useState([]);
 
   const submitForm = (e) => {
     e.preventDefault();
 
-    const correctCount = Array.from(quizForm.children).filter(
-      (el) => el.checked && el.value === "true"
-    );
-
-    setQuizResults(correctCount.length / quizData.questions.length);
+    setQuizResults(correctAnswers.length / quizData.questions.length);
   };
 
   useEffect(() => {
@@ -32,11 +27,20 @@ const Quizzlet = () => {
   return (
     <>
       {quizData && isNaN(quizResults) && (
+<<<<<<< HEAD
+        <form>
+=======
 
         <form id="quiz-form" className="form-quiz">        
 
+>>>>>>> c05c26e90b50eab2a3ab921979dfa3e8dedf5f8d
           {quizData.questions.map((question) => (
-            <Question key={question.prompt} question={question} />
+            <Question
+              key={question.prompt}
+              question={question}
+              correctAnswers={correctAnswers}
+              setCorrectAnswers={setCorrectAnswers}
+            />
           ))}
 
           <button onClick={submitForm}>Submit!</button>
