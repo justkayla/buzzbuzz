@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import Cookie from "js-cookie";
-import { Alert, Button, Container, Form } from "react-bootstrap";
+import { Alert, Container, Form } from "react-bootstrap";
 import { useAppContext } from "../utils/AppContext";
 import { useNavigate } from "react-router-dom";
-import { AwesomeButton } from 'react-awesome-button';
-import 'react-awesome-button/dist/styles.css';
+import AwesomeButton from "../components/AwesomeButton";
+import "react-awesome-button/dist/styles.css";
 
 const Login = (props) => {
   const { appState, setAppState } = useAppContext();
@@ -52,8 +52,7 @@ const Login = (props) => {
 
   return (
     <Container
-      style={{ marginTop: "100px", display: "flex", justifyContent: "center" }}
-    >
+      style={{ marginTop: "100px", display: "flex", justifyContent: "center" }}>
       <Form onSubmit={handleLogin} style={{ width: "50%" }}>
         <Form.Group className="mb-2" controlId="email">
           <Form.Label className="mb-0">Email address</Form.Label>
@@ -80,12 +79,8 @@ const Login = (props) => {
           />
         </Form.Group>
 
-        <AwesomeButton variant="primary" type="submit">
-          Log in
-        </AwesomeButton>{" "}
-        <Button variant="primary" type="submit" onClick={routeChange}>
-          Sign up
-        </Button>
+        <AwesomeButton label="login" />
+        <AwesomeButton label="Sign Up" onClick={routeChange} />
       </Form>
 
       {formMessage.msg.length > 0 && (
