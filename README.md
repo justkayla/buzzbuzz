@@ -16,9 +16,9 @@ page here: https://buzzbuzz-bootcamp.herokuapp.com/
 
 ## Usage
 
-The first page that appears when you start the program should be the login page. Click sign up and enter your desired username, and then your email and password into the fields. Click sign up (If you are already a registered user, then just enter your user info and click log in). You will then be brought to a page showing an overview of the app. Click on the quizzes option in the navigation bar and you will be brought to the quiz page. Here you will be presented with multiple choice questions. Click submit once you are done answering the quiz questions and you will be brought to a results page that shows your quiz score. You can click logout in the navigation bar to sign out. Here is a screenshot of the app after signing in:
+The first page that appears when you start the program should be the login page. Click sign up and enter your desired username, and then your email and password into the fields. Click sign up (If you are already a registered user, then just enter your user info and click log in). You will then be brought to a page showing an overview of the app. Click on the quizzes option in the navigation bar and you will be brought to the quiz page. Here you will presented with multiple choice questions. Click submit once you are done answering the quiz questions and you will be brought to a results page that shows your quiz score. You can click logout in the navigation bar to sign out. Here is a screenshot of the app after signing in:
 
-    ![screenshot](./client/public/assets/screenshot.png)
+    ![screenshot](/client/public/assets/screenshot.png)
 
 ## Credits
 
