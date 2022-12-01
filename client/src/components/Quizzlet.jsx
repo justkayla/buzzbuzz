@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Question from "./Question";
-import Review from "./Review";
+// import Review from "./Review";
+import ReviewWrapper from "./ReviewWrapper";
 
 const Quizzlet = () => {
   const [quizData, setQuizData] = useState();
@@ -42,7 +43,9 @@ const Quizzlet = () => {
 
       {!isNaN(quizResults) && <h2>You got {quizResults * 100}%!</h2>}
       {quizData && (
-          <Review quizId={quizData._id} />
+          // <Review quizId={quizData._id} />
+          <ReviewWrapper />
+
       )}
     </>
   );
