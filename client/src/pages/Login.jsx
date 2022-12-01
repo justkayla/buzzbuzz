@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Cookie from "js-cookie";
-import { Alert, Container, Form } from "react-bootstrap";
+import { Alert, Button, Container, Form } from "react-bootstrap";
 import { useAppContext } from "../utils/AppContext";
 import { useNavigate } from "react-router-dom";
 import AwesomeButton from "../components/AwesomeButton";
@@ -79,7 +79,9 @@ const Login = (props) => {
           />
         </Form.Group>
 
-        <AwesomeButton label="login" />
+        {/* <Button>Login</Button>
+        <Button onClick={routeChange} >Sign Up</Button> */}
+        <AwesomeButton label="Login" />
         <AwesomeButton label="Sign Up" onClick={routeChange} />
       </Form>
 
