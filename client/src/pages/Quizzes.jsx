@@ -54,7 +54,7 @@ const Quiz = () => {
         Animals
       </button>
       <Container style={{ paddingTop: "1em" }}>
-        <h1 className="header-quiz">Today's Featured Quiz</h1>
+        <h1 className="header-quiz">Today's Featured Quiz: Actors and their Characters from Friends!</h1>
         <Quizzlet />
         <img className="line" src={line} alt="placeholder" />
         <div class="py-5">

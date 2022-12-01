@@ -78,7 +78,7 @@ const Login = (props) => {
               />
             </Form.Group>
             <Form.Group className="mb-2" controlId="password">
-              <Form.Label className="mb-0">Password</Form.Label>
+              <Form.Label style={{margin: "0"}} className="mb-0">Password</Form.Label>
               <Form.Control
                 type="password"
                 name="password"
