@@ -1,7 +1,7 @@
 import { useAppContext } from "../utils/AppContext";
 
 import line from "../assets/line.png";
-import flower from "../assets/flower.png";
+import flower from "../assets/flower.jpg";
 import logo from "../assets/logo.png";
 import bee from "../assets/bee.gif";
 
@@ -45,7 +45,7 @@ const Home = () => {
             </div>
             <div class="col-lg-4 mb-4">
               <div class="card-top">
-                <img src="/assets/flower.jpg" className="img-top" alt="placeholder" />
+                <img src={flower} className="img-top" alt="placeholder" />
                 <div class="card-body">
                   <h5 class="card-name">Best Quiz Website 2022</h5>
                   <p class="card-text">

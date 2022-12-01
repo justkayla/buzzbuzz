@@ -93,10 +93,8 @@ a {
 
 }
 .flowers {
-  position: relative;
-  width: 300px;
-  margin-top: 70px;
-  right: 570px;
+  /* position: relative; */
+  width: 300px;  
   
 }
 .logo {
