@@ -27,10 +27,10 @@ body {
 .bee-top {
   border: 1px solid rgb(141, 109, 29);
 }
+
 label, .input-quiz, .quiz-h {
   position: relative;
-  left: 100px;
-  border: 10px, solid, brown;
+  left: 100px;  
 }
 /* .login-btn, .signin-btn {
   posti
