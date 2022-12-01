@@ -15,7 +15,88 @@ body {
   font-weight: 600;
   font-style: normal;
 }
+.title-quiz{
+  color: rgb(139, 133, 115); 
+}
+.login-bee {
+  position: relative;
+  top: 50px;
+}
 
+
+.bee-top {
+  border: 1px solid rgb(141, 109, 29);
+}
+
+label, .input-quiz, .quiz-h {
+  position: relative;
+  left: 100px;  
+}
+/* .login-btn, .signin-btn {
+  posti
+} */
+
+
+.container-fluid {
+    margin-top: 50px
+}
+
+.footer-copyright {
+    margin-top: 13px
+}
+
+a {
+    text-decoration: none !important;
+    color: #777a7c
+}
+
+.description {
+    font-size: 12px
+}
+
+.fa-facebook-f {
+    color: #3b5999
+}
+
+.fa-instagram {
+    color: #e4405f
+}
+
+.fa-youtube {
+    color: #cd201f
+}
+
+.fa-twitter {
+    color: #55acee
+}
+
+.logo-footer{
+    height:30px;
+}
+
+.footer-copyright p {
+    margin-top: 10px
+}
+.trending {
+  color: rgb(139, 133, 115); ;
+}
+.header-quiz {
+  margin-top: 40px;
+  
+ color: rgb(139, 133, 115); 
+}
+.form-quiz{
+  padding-top: 20px;
+  color: #674f20;
+  bottom: 45px;
+  background-color: #ffffff;
+
+}
+.flowers {
+  /* position: relative; */
+  width: 300px;  
+  
+}
 .logo {
   width: 130px;
 }
@@ -50,6 +131,8 @@ body {
 .card-top {
   width: 90px;
   height: 200px;
+  border-radius: 10px;
+  border: 1px solid brown;
   background-color: #ffffff;
 }
 
@@ -72,6 +155,7 @@ body {
 
 .title-main {
   color: #b6a28b;
+  padding-top: 5px;
 }
 
 .category:hover {

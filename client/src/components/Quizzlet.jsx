@@ -27,7 +27,13 @@ const Quizzlet = () => {
   return (
     <>
       {quizData && isNaN(quizResults) && (
+<<<<<<< HEAD
         <form>
+=======
+
+        <form id="quiz-form" className="form-quiz">        
+
+>>>>>>> c05c26e90b50eab2a3ab921979dfa3e8dedf5f8d
           {quizData.questions.map((question) => (
             <Question
               key={question.prompt}

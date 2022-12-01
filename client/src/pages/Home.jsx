@@ -1,48 +1,18 @@
 import { useAppContext } from "../utils/AppContext";
-import bee from "../assets/bee.gif";
-import marvel from "../assets/marvel.jpg";
-import harry from "../assets/harrypotter.jpg";
-import pop from "../assets/popculture.jpg";
-import hellokitty from "../assets/hellokitty.jpg";
-import disney from "../assets/disney.jpg";
-import pika from "../assets/pika.jpg";
-// import image from "../assets/placeholder.png";
+
 import line from "../assets/line.png";
-// import flower from "../assets/flower.jpg";
+import flower from "../assets/flower.jpg";
+import logo from "../assets/logo.png";
+import bee from "../assets/bee.gif";
+
 
 const Home = () => {
   const { appState, setAppState } = useAppContext();
   console.log(appState);
   return (
     <div>
-      <h1 className="title-main">Homepage</h1>
-      <button className="category" variant="primary" type="submit">
-        Latest
-      </button>
-      <button className="category" variant="primary" type="submit">
-        Movies
-      </button>
-      <button className="category" variant="primary" type="submit">
-        Trivia
-      </button>
-      <button className="category" variant="primary" type="submit">
-        Books
-      </button>
-      <button className="category" variant="primary" type="submit">
-        Music
-      </button>
-      <button className="category" variant="primary" type="submit">
-        Games
-      </button>
-      <button className="category" variant="primary" type="submit">
-        Personality
-      </button>
-      <button className="category" variant="primary" type="submit">
-        Zodiac
-      </button>
-      <button className="category" variant="primary" type="submit">
-        Animals
-      </button>
+      <h1 className="title-main">Home</h1>
+
       {/* Cards on Top */}
 
       <section id="bee-top">
@@ -51,16 +21,22 @@ const Home = () => {
           <h1 className="greeting">bzzz..Welcome!</h1>
           <p>To take more quizzes click the 'quizzes' Tab!</p>
         </div>
-        </section>
-        <section id="gallery">
+      </section>
+      <section id="gallery">
         <div class="container">
           <div class="row">
             <div class="col-lg-4 mb-4">
               <div class="card-top">
-                <img className="img-top" src="/assets/flower.jpg" alt="yellow flower" />
+
+                <img src={flower} class="img-top" alt="yellow flower" />
+
                 <div class="card-body">
-                  <h5 class="card-name">About Us</h5>
-                  <p class="card-text"> BuzzBuzz, is committed to providing trusted, quality, brand-safe news and entertainment to our viewers; making content on the Internet more inclusive, empathetic, and creative; and inspiring our audience to live better lives</p>
+                  <h5 class="card-name">Best Quizzes!</h5>
+                  <p class="card-text">
+                    {" "}
+                    🙶The quizzes are SUPER fun and I spend hours playing BuzzBuzz quizzes!🙷
+                  </p>
+                  <h5 class="ranking"> ─ Anonymous User</h5>
                   {/* <a href="/Profile" id="flower-btn" class="btn btn-outline-warning btn-sm">
                     View Profile */}
                   {/* </a> */}
@@ -69,24 +45,30 @@ const Home = () => {
             </div>
             <div class="col-lg-4 mb-4">
               <div class="card-top">
-                <img src="/assets/flower.jpg" className="img-top" alt="placeholder" />
+                <img src={flower} className="img-top" alt="placeholder" />
                 <div class="card-body">
-                  <h5 class="card-name">Saved Quizzes</h5>
-                  <p class="card-text"></p>
-                  <a href="/" class="btn btn-outline-warning btn-sm">
-                    View Here
-                  </a>
+                  <h5 class="card-name">Best Quiz Website 2022</h5>
+                  <p class="card-text">
+                    🙶BuzzBuzz is reliable website that provides the highest
+                    quality information for quizzes and expanded for a diverse
+                    audience!🙷{" "}
+                  </p>
+                  <h5 class="ranking"> ─ WebsiteRankers</h5>
                 </div>
               </div>
             </div>
             <div class="col-lg-4 mb-4">
               <div class="card-top">
-                <img src="/assets/placeholder.png" className="img-top" alt="placeholder" />
+
+                <img src={flower} class="img-top" alt="placeholder" />
+
                 <div class="card-body">
-                  <h5 class="card-name">Logout</h5>
-                  <p class="card-text"></p>
-                  <a href="/" class="btn btn-outline-warning btn-sm">
-                    Read More </a>
+                  <h5 class="card-name">So Addicting!</h5>
+                  <p class="card-text">
+                    🙶BuzzBuzz is has ALL the latest Pop culture buzz and content
+                    in their engaging quizzes, I highly recommend.🙷
+                  </p>
+                  <h5 class="ranking"> ─ Anonymous User</h5>
                 </div>
               </div>
             </div>
@@ -94,155 +76,139 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      {/* <div class="row">
-  <div class="column">
-    <div class="card-top">
-    <img className="image" src={image} alt="placeholder" />
-    </div>
-  </div>
-  <div class="column">
-    <div class="card-top">
-    <img className="image" src={image} alt="placeholder" />
-    </div>
-  </div>
-  <div class="column">
-    <div class="card-top">
-    <img className="image" src={image} alt="placeholder" />
-    </div>
-  </div>
-</div> */}
-      <div class="py-5">
-        <div class="container">
-          <h2 className="trending"> Trending Quizzes</h2>
-          <div class="row hidden-md-up">
-            <div class="col-md-4">
-              <div class="card">
-                <div class="card-block">
-                  <img className="mquiz-img" src={marvel} alt="placeholder" />
-                  <h4 class="card-title">
-                    Since Marvel Gifted Us The Best Special, Let's See Which
-                    Character From The "TGOTG Holiday Special" You Are
-                  </h4>
-                  <h6 class="card-subtitle text-muted">Marvel</h6>
-                  <p class="card-text p-y-1">By Noah Mayfield</p>
-                  <a href="#" class="card-link">
-                    Take Quiz
-                  </a>
-                  <a href="#" class="card-link">
-                    View All Quizzes
-                  </a>
+      {/* Footer (Not fully functional, mainly style) */}
+      <div class="container-fluid">
+        {" "}
+        <output class="bg-white shadow-sm">
+          <footer class="section-footer border-top">
+            <div class="container-fluid">
+              <section class="footer-top padding-y">
+                <div class="row">
+                  <aside class="col-md-4">
+                    <article class="mr-3">
+                      {" "}
+                      <img className="logo" src={logo} alt="buzzbuzz logo" />
+                      <p class="mt-3 description">
+                        BuzzBuzz, is committed to providing trusted, quality,
+                        brand-safe news and entertainment to our viewers; making
+                        content on the Internet more inclusive, empathetic, and
+                        creative; and inspiring our audience to live better
+                        lives
+                      </p>
+                    </article>
+                  </aside>
+                  <aside class="col-sm-3 col-md-2">
+                    <h6 class="title">About</h6>
+                    <ul class="list-unstyled">
+                      <li>
+                        {" "}
+                        <a href="#" data-abc="true">
+                          About us
+                        </a>
+                      </li>
+                      <li>
+                        {" "}
+                        <a href="#" data-abc="true">
+                          Services
+                        </a>
+                      </li>
+                      <li>
+                        {" "}
+                        <a href="#" data-abc="true">
+                          Terms & Condition
+                        </a>
+                      </li>
+                    </ul>
+                  </aside>
+                  <aside class="col-sm-3 col-md-2">
+                    <h6 class="title">Services</h6>
+                    <ul class="list-unstyled">
+                      <li>
+                        {" "}
+                        <a href="#" data-abc="true">
+                          Help center
+                        </a>
+                      </li>
+                      <li>
+                        {" "}
+                        <a href="#" data-abc="true">
+                          Terms and Policy
+                        </a>
+                      </li>
+                      <li>
+                        {" "}
+                        <a href="#" data-abc="true">
+                          Open dispute
+                        </a>
+                      </li>
+                    </ul>
+                  </aside>
+                  <aside class="col-sm-3 col-md-2">
+                    <h6 class="title">For users</h6>
+                    <ul class="list-unstyled">
+                      <li>
+                        {" "}
+                        <a href="/login" data-abc="true">
+                          {" "}
+                          User Login{" "}
+                        </a>
+                      </li>
+                      <li>
+                        {" "}
+                        <a href="/signup" data-abc="true">
+                          {" "}
+                          User Signup{" "}
+                        </a>
+                      </li>
+                      <li>
+                        {" "}
+                        <a href="/profile" data-abc="true">
+                          {" "}
+                          Profile{" "}
+                        </a>
+                      </li>
+                    </ul>
+                  </aside>
+                  <aside class="col-sm-2 col-md-2">
+                    <h6 class="title">Our app</h6>{" "}
+                    <a href="#" class="d-block mb-2" data-abc="true">
+                      <img
+                        class="img-responsive"
+                        src="https://i.imgur.com/nkZP7fe.png"
+                        height="40"
+                      />
+                    </a>{" "}
+                    <a href="#" class="d-block mb-2" data-abc="true">
+                      <img
+                        class="img-responsive"
+                        src="https://i.imgur.com/47q2YGt.png"
+                        height="40"
+                        width="123"
+                      />
+                    </a>
+                  </aside>
                 </div>
-              </div>
+              </section>
+              <section class="footer-copyright border-top">
+                <p class="float-left text-muted">
+                  {" "}
+                  &copy; 2022 BuzzBuzz All rights reserved{" "}
+                </p>
+                <p target="_blank" class="float-right text-muted">
+                  {" "}
+                  <a href="#" data-abc="true">
+                    Privacy &amp; Cookies
+                  </a>{" "}
+                  &nbsp; &nbsp;{" "}
+                  <a href="#" data-abc="true">
+                    Accessibility
+                  </a>{" "}
+                </p>
+              </section>
             </div>
-            <div class="col-md-4">
-              <div class="card">
-                <div class="card-block">
-                  <img className="mquiz-img" src={pop} alt="" />
-                  <h4 class="card-title">
-                    Let's See If You Have Enough Pop Culture Knowledge To
-                    Identify Which Of These Famous People Were Born On These
-                    Holidays?
-                  </h4>
-                  <h6 class="card-subtitle text-muted">Pop Culture</h6>
-                  <p class="card-text p-y-1">By Sage V</p>
-                  <a href="#" class="card-link">
-                    Take Quiz
-                  </a>
-                  <a href="#" class="card-link">
-                    View All Quizzes
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card">
-                <div class="card-block">
-                  <img className="mquiz-img" src={harry} alt="placeholder" />
-                  <h4 class="card-title">
-                    ㅤYou'll Only Pass This "Harry Potter" Quiz If You Watched
-                    All The Movies AND Read All The Books!ㅤㅤㅤㅤㅤ
-                  </h4>
-                  <h6 class="card-subtitle text-muted">Harry Potter</h6>
-                  <p class="card-text p-y-1">By Emilymartin3</p>
-                  <a href="#" class="card-link">
-                    Take Quiz
-                  </a>
-                  <a href="#" class="card-link">
-                    View All Quizzes
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <br></br>
-          <div class="row">
-            <div class="col-md-4">
-              <div class="card">
-                <div class="card-block">
-                  <img className="mquiz-img" src={disney} alt="placeholder" />
-                  <h4 class="card-title">
-                    If You Were An Obscure Disney Character, Who Would You
-                    Be?ㅤㅤㅤㅤㅤ
-                  </h4>
-                  <h6 class="card-subtitle text-muted">Disney</h6>
-                  <p class="card-text p-y-1">audreylaw11</p>
-                  <a href="#" class="card-link">
-                    Take Quiz
-                  </a>
-                  <a href="/Quizzlet" class="card-link">
-                    View All Quizzes
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card">
-                <div class="card-block">
-                  <img
-                    className="mquiz-img"
-                    src={hellokitty}
-                    alt="placeholder"
-                  />
-                  <h4 class="card-title">
-                    Everyone Has A Sanrio Character Who Matches Their
-                    Personality. What's Yours?
-                  </h4>
-                  <h6 class="card-subtitle text-muted">Hello Kitty</h6>
-                  <p class="card-text p-y-1">Kelly Martinez</p>
-                  <a href="#" class="card-link">
-                    Take Quiz
-                  </a>
-                  <a href="#" class="card-link">
-                    View All Quizzes
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card">
-                <div class="card-block">
-                  <img className="mquiz-img" src={pika} alt="placeholder" />
-                  <h4 class="card-title">
-                    How Many Of These 36 Classic Pokémon Can You Actually
-                    Identify?ㅤㅤㅤㅤㅤ
-                  </h4>
-                  <h6 class="card-subtitle text-muted">Pokemon</h6>
-                  <p class="card-text p-y-1">Kelly Martinez</p>
-                  <a href="#" class="card-link">
-                    Take Quiz
-                  </a>
-                  <a href="#" class="card-link">
-                    View All Quizzes
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+          </footer>
+        </output>{" "}
       </div>
-
-      {/* {appState.user !== null && <p>We have a logged in user: {appState.user.email}</p>} */}
     </div>
   );
 };

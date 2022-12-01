@@ -4,6 +4,7 @@ import { useState } from "react";
 import AwesomeButton from "../components/AwesomeButton";
 import Cookie from "js-cookie";
 
+
 const Signup = () => {
   const { appState, setAppState } = useAppContext();
 
@@ -89,7 +90,6 @@ const Signup = () => {
 
         <AwesomeButton label="Sign Up!" />
       </Form>
-
       {formMessage.msg.length > 0 && (
         <Alert variant={formMessage.type} style={{ marginTop: "2em" }}>
           {formMessage.msg}

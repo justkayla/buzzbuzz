@@ -17,6 +17,7 @@ const RadioButton = ({
 
   return (
     <>
+<<<<<<< HEAD
       <input
         type="radio"
         id={id}
@@ -24,6 +25,9 @@ const RadioButton = ({
         value={value}
         onChange={updateAnswers}
       />
+=======
+      <input className="input-quiz" type="radio" id={id} name={name} value={value} />
+>>>>>>> c05c26e90b50eab2a3ab921979dfa3e8dedf5f8d
       <label htmlFor={id}>{text}</label>
       <br />
     </>
@@ -33,7 +37,7 @@ const RadioButton = ({
 const Question = ({ question, correctAnswers, setCorrectAnswers }) => {
   return (
     <>
-      <h4>{question.prompt}?</h4>
+      <h4 className="quiz-h">{question.prompt}?</h4>
 
       {question.options.map((opt) => (
         <RadioButton
