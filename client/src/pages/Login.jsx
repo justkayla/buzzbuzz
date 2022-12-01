@@ -3,6 +3,8 @@ import Cookie from "js-cookie";
 import { Alert, Button, Container, Form } from "react-bootstrap";
 import { useAppContext } from "../utils/AppContext";
 import { useNavigate } from "react-router-dom";
+import flowers from "../assets/flowers.gif";
+import bee from "../assets/bee.gif";
 
 const Login = (props) => {
   const { appState, setAppState } = useAppContext();
@@ -49,8 +51,16 @@ const Login = (props) => {
   }, [appState.user]);
 
   return (
+    <>
+    <div className="login-bee">
+      <img className="bee" src={bee} alt="happy-bee" />
+        <div class="speech-bubble">
+          <h1 className="greeting">bzzz..Welcome!</h1>
+          <p>Pleazzz.. Login!</p>
+        </div>
+        </div>
     <Container
-      style={{ marginTop: "100px", display: "flex", justifyContent: "center" }}
+      style={{display: "flex", justifyContent: "center" }}
     >
       <Form onSubmit={handleLogin} style={{ width: "50%" }}>
         <Form.Group className="mb-2" controlId="email">
@@ -77,10 +87,10 @@ const Login = (props) => {
             }
           />
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <Button className="Login-btn" variant="primary" type="submit">
           Log in
         </Button>{" "}
-        <Button variant="primary" onClick={routeChange}>
+        <Button className="Signup-btn" variant="primary" onClick={routeChange}>
           Sign up
         </Button>
       </Form>
@@ -90,7 +100,11 @@ const Login = (props) => {
           {formMessage.msg}
         </Alert>
       )}
+      <div>
+      <img className="flowers" src={flowers} alt="flowers" />
+      </div>
     </Container>
+    </>
   );
 };
 

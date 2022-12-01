@@ -3,6 +3,7 @@ import { useAppContext } from "../utils/AppContext";
 import { useState } from "react";
 import Cookie from "js-cookie";
 
+
 const Signup = () => {
   const { appState, setAppState } = useAppContext();
 
@@ -89,7 +90,6 @@ const Signup = () => {
           Sign up!
         </Button>
       </Form>
-
       {formMessage.msg.length > 0 && (
         <Alert variant={formMessage.type} style={{ marginTop: "2em" }}>
           {formMessage.msg}

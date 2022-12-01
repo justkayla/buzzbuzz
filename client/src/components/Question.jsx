@@ -1,7 +1,7 @@
 const RadioButton = ({ id, name, value, text }) => {
   return (
     <>
-      <input type="radio" id={id} name={name} value={value} />
+      <input className="input-quiz" type="radio" id={id} name={name} value={value} />
       <label htmlFor={id}>{text}</label>
       <br />
     </>
@@ -11,7 +11,7 @@ const RadioButton = ({ id, name, value, text }) => {
 const Question = ({ question }) => {
   return (
     <>
-      <h4>{question.prompt}?</h4>
+      <h4 className="quiz-h">{question.prompt}?</h4>
 
       {question.options.map((opt) => (
         <RadioButton
