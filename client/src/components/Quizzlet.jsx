@@ -6,7 +6,7 @@ import ReviewWrapper from "./ReviewWrapper";
 const Quizzlet = () => {
   const [quizData, setQuizData] = useState();
   const [quizResults, setQuizResults] = useState();
-  const quizForm = document.querySelector("form");
+  const quizForm = document.getElementById("quiz-form");
 
   const submitForm = (e) => {
     e.preventDefault();
@@ -32,7 +32,7 @@ const Quizzlet = () => {
   return (
     <>
       {quizData && isNaN(quizResults) && (
-        <form className="">
+        <form id="quiz-form">
           {quizData.questions.map((question) => (
             <Question key={question.prompt} question={question} />
           ))}
@@ -43,9 +43,8 @@ const Quizzlet = () => {
 
       {!isNaN(quizResults) && <h2>You got {quizResults * 100}%!</h2>}
       {quizData && (
-          // <Review quizId={quizData._id} />
-          <ReviewWrapper />
-
+        // <Review quizId={quizData._id} />
+        <ReviewWrapper />
       )}
     </>
   );
