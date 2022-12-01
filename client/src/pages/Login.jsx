@@ -3,6 +3,8 @@ import Cookie from "js-cookie";
 import { Alert, Button, Container, Form } from "react-bootstrap";
 import { useAppContext } from "../utils/AppContext";
 import { useNavigate } from "react-router-dom";
+import flowers from "../assets/flowers.gif";
+import bee from "../assets/bee.gif";
 import Stack from "react-bootstrap/Stack";
 import AwesomeButton from "../components/AwesomeButton";
 import "react-awesome-button/dist/styles.css";
@@ -52,9 +54,18 @@ const Login = (props) => {
   }, [appState.user]);
 
   return (
+    <>
+    <div className="login-bee">
+      <img className="bee" src={bee} alt="happy-bee" />
+        <div class="speech-bubble">
+          <h1 className="greeting">bzzz..Welcome!</h1>
+          <p>Pleazzz.. Login!</p>
+        </div>
+        </div>
     <Container
-      style={{ marginTop: "100px", display: "flex", justifyContent: "center" }}
+      style={{display: "flex", justifyContent: "center" }}
     >
+
       <Stack>
         <Form onSubmit={handleLogin} style={{ width: "50%" }}>
           <Form.Group className="mb-2" controlId="email">
@@ -99,8 +110,13 @@ const Login = (props) => {
         >
           Sign Up
         </Button>
+        
+      <div>
+      <img className="flowers" src={flowers} alt="flowers" />
+      </div>
       </Stack>
     </Container>
+    </>
   );
 };
 
