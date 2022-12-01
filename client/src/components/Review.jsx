@@ -1,33 +1,42 @@
 import { useState, useEffect } from "react";
 
 const Review = ({ quizId }) => {
-    const [quizReviews, setQuizReviews] = useState(null);
+  const [quizReviews, setQuizReviews] = useState(null);
 
-    useEffect(() => {
+  useEffect(() => {
     const fetchData = async () => {
-        const res = await fetch(`/api/review/quiz/:${quizId}`);
-        const data = (await res.json()).payload;
-        setQuizReviews(data);
+      const res = await fetch(`/api/review/quiz/:${quizId}`);
+      const data = (await res.json()).payload;
+      setQuizReviews(data);
     };
 
     fetchData();
   }, []);
-    console.log(quizReviews)
-    return (
-        <>
-            {quizReviews !== null && (
-                <div>
-                    {quizReviews.map((review) => {
-                        return (
-                            <>
-                                {review.review}
-                            </>
-                        )
-                    })}
-                </div>
-            )}
-        </>
-    )
-}
+  console.log(quizReviews);
+  return (
+    <>
+      {quizReviews !== null && (
+        <div>
+          {quizReviews.map((review) => {
+            return (
+              <>
+                <p
+                  style={{
+                    padding: "3px",
+                    margin: "10px",
+                    borderBottom: "red",
+                    width: "100%",
+                  }}
+                >
+                  {review.review}
+                </p>
+              </>
+            );
+          })}
+        </div>
+      )}
+    </>
+  );
+};
 
 export default Review;
