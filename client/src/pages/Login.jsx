@@ -52,7 +52,8 @@ const Login = (props) => {
 
   return (
     <Container
-      style={{ marginTop: "100px", display: "flex", justifyContent: "center" }}>
+      style={{ marginTop: "100px", display: "flex", justifyContent: "center" }}
+    >
       <Form onSubmit={handleLogin} style={{ width: "50%" }}>
         <Form.Group className="mb-2" controlId="email">
           <Form.Label className="mb-0">Email address</Form.Label>
@@ -82,8 +83,8 @@ const Login = (props) => {
         {/* <Button>Login</Button>
         <Button onClick={routeChange} >Sign Up</Button> */}
         <AwesomeButton label="Login" />
-        <AwesomeButton label="Sign Up" onClick={routeChange} />
       </Form>
+      <AwesomeButton label="Sign Up" onClick={routeChange} />
 
       {formMessage.msg.length > 0 && (
         <Alert variant={formMessage.type} style={{ marginTop: "2em" }}>
