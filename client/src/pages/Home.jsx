@@ -1,8 +1,10 @@
 import { useAppContext } from "../utils/AppContext";
+
 import line from "../assets/line.png";
 import flower from "../assets/flower.png";
 import logo from "../assets/logo.png";
 import bee from "../assets/bee.gif";
+
 
 const Home = () => {
   const { appState, setAppState } = useAppContext();
@@ -25,7 +27,9 @@ const Home = () => {
           <div class="row">
             <div class="col-lg-4 mb-4">
               <div class="card-top">
+
                 <img src={flower} class="img-top" alt="yellow flower" />
+
                 <div class="card-body">
                   <h5 class="card-name">Best Quizzes!</h5>
                   <p class="card-text">
@@ -41,7 +45,7 @@ const Home = () => {
             </div>
             <div class="col-lg-4 mb-4">
               <div class="card-top">
-                <img src={flower} class="img-top" alt="placeholder" />
+                <img src="/assets/flower.jpg" className="img-top" alt="placeholder" />
                 <div class="card-body">
                   <h5 class="card-name">Best Quiz Website 2022</h5>
                   <p class="card-text">
@@ -55,7 +59,9 @@ const Home = () => {
             </div>
             <div class="col-lg-4 mb-4">
               <div class="card-top">
+
                 <img src={flower} class="img-top" alt="placeholder" />
+
                 <div class="card-body">
                   <h5 class="card-name">So Addicting!</h5>
                   <p class="card-text">

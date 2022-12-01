@@ -5,6 +5,9 @@ import { useAppContext } from "../utils/AppContext";
 import { useNavigate } from "react-router-dom";
 import flowers from "../assets/flowers.gif";
 import bee from "../assets/bee.gif";
+import Stack from "react-bootstrap/Stack";
+import AwesomeButton from "../components/AwesomeButton";
+import "react-awesome-button/dist/styles.css";
 
 const Login = (props) => {
   const { appState, setAppState } = useAppContext();
@@ -62,47 +65,56 @@ const Login = (props) => {
     <Container
       style={{display: "flex", justifyContent: "center" }}
     >
-      <Form onSubmit={handleLogin} style={{ width: "50%" }}>
-        <Form.Group className="mb-2" controlId="email">
-          <Form.Label className="mb-0">Email address</Form.Label>
-          <Form.Control
-            type="email"
-            name="email"
-            placeholder="Enter email"
-            value={loginCreds.email}
-            onChange={(e) =>
-              setLoginCreds({ ...loginCreds, email: e.target.value })
-            }
-          />
-        </Form.Group>
-        <Form.Group className="mb-2" controlId="password">
-          <Form.Label className="mb-0">Password</Form.Label>
-          <Form.Control
-            type="password"
-            name="password"
-            placeholder="Password"
-            value={loginCreds.password}
-            onChange={(e) =>
-              setLoginCreds({ ...loginCreds, password: e.target.value })
-            }
-          />
-        </Form.Group>
-        <Button className="Login-btn" variant="primary" type="submit">
-          Log in
-        </Button>{" "}
-        <Button className="Signup-btn" variant="primary" onClick={routeChange}>
-          Sign up
-        </Button>
-      </Form>
 
-      {formMessage.msg.length > 0 && (
-        <Alert variant={formMessage.type} style={{ marginTop: "2em" }}>
-          {formMessage.msg}
-        </Alert>
-      )}
+      <Stack>
+        <Form onSubmit={handleLogin} style={{ width: "50%" }}>
+          <Form.Group className="mb-2" controlId="email">
+            <Form.Label className="mb-0">Email address</Form.Label>
+            <Form.Control
+              type="email"
+              name="email"
+              placeholder="Enter email"
+              value={loginCreds.email}
+              onChange={(e) =>
+                setLoginCreds({ ...loginCreds, email: e.target.value })
+              }
+            />
+          </Form.Group>
+          <Form.Group className="mb-2" controlId="password">
+            <Form.Label className="mb-0">Password</Form.Label>
+            <Form.Control
+              type="password"
+              name="password"
+              placeholder="Password"
+              value={loginCreds.password}
+              onChange={(e) =>
+                setLoginCreds({ ...loginCreds, password: e.target.value })
+              }
+            />
+          </Form.Group>
+
+          {/* <Button>Login</Button>
+        <Button onClick={routeChange} >Sign Up</Button> */}
+          <AwesomeButton label="Login" />
+        </Form>
+
+        {formMessage.msg.length > 0 && (
+          <Alert variant={formMessage.type} style={{ marginTop: "2em" }}>
+            {formMessage.msg}
+          </Alert>
+        )}
+        <Button
+          style={{ border: "black 2px solid", width: "100px", marginTop: "10px", boxShadow: "#ffc107 4px 4px"}}
+          variant="warning"
+          onClick={routeChange}
+        >
+          Sign Up
+        </Button>
+        
       <div>
       <img className="flowers" src={flowers} alt="flowers" />
       </div>
+      </Stack>
     </Container>
     </>
   );

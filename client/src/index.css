@@ -138,8 +138,7 @@ a {
   background-color: #ffffff;
 }
 
-.card-text{
-  
+.card-text {
   color: #555;
   font-size: 14px;
 }
@@ -200,7 +199,7 @@ a {
   padding-bottom: 2px;
 }
 .img-top {
-  width: 50px;
+  width: 50px !important;
   margin-top: 10px;
 }
 . {

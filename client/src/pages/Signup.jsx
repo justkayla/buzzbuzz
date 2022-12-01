@@ -1,6 +1,7 @@
 import { Alert, Button, Container, Form } from "react-bootstrap";
 import { useAppContext } from "../utils/AppContext";
 import { useState } from "react";
+import AwesomeButton from "../components/AwesomeButton";
 import Cookie from "js-cookie";
 
 
@@ -30,7 +31,7 @@ const Signup = () => {
     // create a token for this new user
     if (newUser.result === "success") {
       Cookie.set("auth-token", newUser.payload.token);
-      window.location.href = "/home"
+      window.location.href = "/home";
       setFormMessage({
         type: "success",
         msg: "Successful sign up.",
@@ -45,11 +46,12 @@ const Signup = () => {
   };
 
   return (
-    <Container style={{ marginTop: "100px", display: "flex", justifyContent: "center" }}>
+    <Container
+      style={{ marginTop: "100px", display: "flex", justifyContent: "center" }}>
       <Form onSubmit={handleSignup} style={{ width: "50%" }}>
         <Form.Group className="mb-2" controlId="username">
           <Form.Label className="mb-0">Username</Form.Label>
-          <Form.Control            
+          <Form.Control
             type="username"
             name="username"
             placeholder="Enter username"
@@ -86,9 +88,7 @@ const Signup = () => {
           />
         </Form.Group>
 
-        <Button variant="primary" type="submit">
-          Sign up!
-        </Button>
+        <AwesomeButton label="Sign Up!" />
       </Form>
       {formMessage.msg.length > 0 && (
         <Alert variant={formMessage.type} style={{ marginTop: "2em" }}>
